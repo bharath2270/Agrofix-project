@@ -1,0 +1,88 @@
+GET http://localhost:3000/products
+
+###
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Brinjal",
+  "price": 30
+}
+
+###
+GET http://localhost:3000/products/6801442f1fa126f14197da08
+
+### 
+PATCH http://localhost:3000/products/id
+
+###
+
+DELETE http://localhost:3000/products/id
+
+###
+
+GET http://localhost:3000/
+
+
+###
+
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+
+{
+  "buyerName": "Anil Reddy",
+  "buyerContact": "+91-9876543210",
+  "deliveryAddress": "Plot 101 Colony Hyd",
+  "items": [
+    {
+      "productId": "68013cd6425423339c5920de",  
+      "quantity": 3
+    },
+    {
+      "productId": "6801442f1fa126f14197da08",  
+      "quantity": 1
+    }
+  ]
+}
+
+
+###
+GET http://localhost:3000/orders/ 68048806fde0a860c83cafcf
+
+###
+
+PATCH http://localhost:3000/orders/680144611fa126f14197da0d
+Content-Type: application/json
+
+{
+  "status": "Delivered"
+}
+
+###
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "testuser@example.com",
+  "password": "password123",
+  "role": "user"
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "testuser@example.com",
+  "password": "password123"
+}
+
+
+
+
+
+
