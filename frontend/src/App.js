@@ -12,9 +12,11 @@ import ProductManager from './pages/admin/ProductManager/index.js';
 import OrderManager from './pages/admin/OrderManager/index.js';
 import PrivateRoute from './components/PrivateRoute';
 import { AuthProvider } from './context/AuthContext';
-import OrderSearchForm from './components/OrderSearchForm/index.js'; // Import OrderSearchForm
+import OrderSearchForm from './components/OrderSearchForm/index.js'; 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 function App() {
   return (
@@ -25,19 +27,18 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
-          {/* User Routes */}
           <Route path="/user" element={<PrivateRoute role="user"><Home /></PrivateRoute>} />
           <Route path="/user/products" element={<PrivateRoute role="user"><ProductList /></PrivateRoute>} />
           <Route path="/user/order" element={<PrivateRoute role="user"><OrderForm /></PrivateRoute>} />
-          <Route path="/user/orders" element={<PrivateRoute role="user"><OrderSearchForm /></PrivateRoute>} /> {/* Updated to OrderSearchForm */}
-          <Route path="/user/orders/:orderId" element={<PrivateRoute role="user"><OrderTracking /></PrivateRoute>} /> {/* OrderTracking with OrderId */}
+          <Route path="/user/orders" element={<PrivateRoute role="user"><OrderSearchForm /></PrivateRoute>} /> 
+          <Route path="/user/orders/:orderId" element={<PrivateRoute role="user"><OrderTracking /></PrivateRoute>} /> 
 
-          {/* Admin Routes */}
+         
           <Route path="/admin" element={<PrivateRoute role="admin"><AdminDashboard /></PrivateRoute>} />
           <Route path="/admin/products" element={<PrivateRoute role="admin"><ProductManager /></PrivateRoute>} />
           <Route path="/admin/orders" element={<PrivateRoute role="admin"><OrderManager /></PrivateRoute>} />
 
-          {/* Default Home */}
+       
           <Route path="*" element={<Login />} />
         </Routes>
       </Router>
