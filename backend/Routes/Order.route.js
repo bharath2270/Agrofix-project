@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
 
   try {
 
-    const productIds = items.map(item => new mongoose.Types.ObjectId(item.productId));  // 
+    const productIds = items.map(item => new mongoose.Types.ObjectId(item.productId));  
    
     const products = await Product.find({ '_id': { $in: productIds } });
 

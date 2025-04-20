@@ -32,7 +32,7 @@ const ProductManager = () => {
       setForm({ name: '', price: '', category: '' });
       setEditingId(null);
     }
-    setImage(null); // reset image
+    setImage(null); 
     setShowModal(true);
   };
 
@@ -101,7 +101,7 @@ const ProductManager = () => {
         </tbody>
       </Table>
 
-      {/* Add/Edit Modal */}
+     
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>{editingId ? 'Edit' : 'Add'} Product</Modal.Title>

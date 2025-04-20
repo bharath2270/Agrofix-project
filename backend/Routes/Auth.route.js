@@ -43,7 +43,7 @@ router.post('/login', async (req, res) => {
     if (!isMatch) return res.status(400).json({ message: 'Invalid credentials' });
 
     const payload = { userId: user._id, role: user.role };
-    const token = jwt.sign(payload, 'your-secret-key', { expiresIn: '30m' }); // Fixed here
+    const token = jwt.sign(payload, 'your-secret-key', { expiresIn: '30m' }); 
 
     const cookies = new Cookies(req, res);
     cookies.set('jwt_token', token, {

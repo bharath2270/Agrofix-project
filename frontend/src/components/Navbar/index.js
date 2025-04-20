@@ -21,7 +21,7 @@ const AppNavbar = () => {
         navigate('/user');
       }
     } else {
-      // If not logged in, navigate to the homepage or login page
+      // If not logged in  navigate to the homepage or login page
       navigate('/');
     }
   };
