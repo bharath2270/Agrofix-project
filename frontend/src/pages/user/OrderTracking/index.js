@@ -14,7 +14,7 @@ const OrderTracking = () => {
     setOrder(null);
 
     try {
-      const res = await fetch(`http://localhost:8000/orders/${orderId}`);
+      const res = await fetch(`https://agrofix-project.onrender.com/orders/${orderId}`);
       if (!res.ok) throw new Error('Order not found');
 
       const data = await res.json();
